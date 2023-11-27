@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página com Efeitos</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Adiciona transições suaves para a cor de fundo e opacidade */
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.3s ease-in-out; /* Adiciona uma transição suave para a cor de fundo do header */
+      }
+
+      header:hover,
+      body:hover {
+        background-color: #555; /* Altera a cor de fundo do body e do header no hover */
+      }
+
+      h1 {
+        position: relative;
+      }
+
+      h1::before {
+        content: "🌟 "; /* Adiciona um emoji antes do texto do h1 */
+        transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave para a animação de rotação */
+      }
+
+      h1:hover::before {
+        transform: rotate(360deg); /* Rotaciona o emoji no hover */
+      }
+
+      p::after {
+        content: " - Até o dia 29/12";
+        color: #888;
+      }
+
+      section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0.9;
+        transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona transições suaves para a opacidade e sombra */
+      }
+
+      section:hover {
+        opacity: 1;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona transições suaves para a animação de escala e sombra */
+      }
+
+      li:hover {
+        transform: scale(1.1); /* Escala o item da lista no hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumenta a sombra no hover */
+      }
+
+      li::before {
+        content: "🔹";
+        color: #333;
+        font-size: 1.2em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Atividades a serem entregues</h1>
+    </header>
+
+    <section>
+      <p>As seguintes atividades devem ser entregues pelo aluno:</p>
+
+      <h2>Lista de atividades</h2>
+      <ul>
+        <li>1 - Resumo do livro: Um garoto consumista na roça.</li>
+        <li>2 - Redação sobre o livro</li>
+        <li>
+          3 - Leitura e resumo dos capítulos de 1 a 4 do livro O Príncipe.
+        </li>
+        <li>4 - Redação sobre a industrialização.</li>
+      </ul>
+    </section>
+  </body>
+</html>
